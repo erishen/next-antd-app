@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node ./src/server/index.js",
-    "build": "next build",
-    "start": "cross-env NODE_ENV=production node ./src/server/index.js",
+    "dev": "nodemon ./src/server/index.ts",
+    "build": "npm run clean && next build && tsc --project tsconfig.server.json",
+    "start": "cross-env NODE_ENV=production node ./dist/index.js",
     "lint": "next lint",
-    "format": "prettier --write \"src/**/*.ts*\""
+    "format": "prettier --write \"src/**/*.ts*\"",
+    "clean": "rimraf dist && rimraf .next && rimraf build"
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
@@ -21,15 +22,23 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.14",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "@typescript-eslint/typescript-estree": "^8.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "nodemon": "^3.1.4",
     "postcss": "^8",
     "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   }
 }
