@@ -1,0 +1,35 @@
+{
+  "name": "next-antd-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./src/server/index.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node ./src/server/index.js",
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.ts*\""
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.4.0",
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "antd": "^5.20.0",
+    "axios": "^1.7.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "eslint-plugin-prettier": "^5.2.1",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

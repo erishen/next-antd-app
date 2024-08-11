@@ -1,0 +1,7 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    // 你可以在这里添加额外的 ESLint 规则
+  }
+}
